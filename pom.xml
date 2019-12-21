@@ -14,8 +14,28 @@
 	<name>springcamel</name>
 	<description>Demo project for Spring Boot</description>
 
+
+<scm>
+		<developerConnection> scm:git:https://github.com/NagendrappaE/springapache.git</developerConnection>
+		<connection> scm:git:https://github.com/NagendrappaE/springapache.git</connection>
+		<url> scm:git:https://github.com/NagendrappaE/springapache.git</url>
+	</scm>
+
+
 	<properties>
 		<java.version>1.8</java.version>
+		
+		<!-- Plugin Versions -->
+		<clean.plugin.version>3.1.0</clean.plugin.version>
+		<resources.plugin.version>3.1.0</resources.plugin.version>
+		<compiler.plugin.version>3.7.0</compiler.plugin.version>
+		<jar.plugin.version>3.1.2</jar.plugin.version>
+		<install.plugin.version>3.0.0-M1</install.plugin.version>
+		<deploy.plugin.version>3.0.0-M1</deploy.plugin.version>
+		<surefire.plugin.version>2.22.0</surefire.plugin.version>
+		<failsafe.plugin.version>2.22.0</failsafe.plugin.version>
+		<release.plugin.version>2.5.1</release.plugin.version>
+		
 	</properties>
 
 	<dependencies>
@@ -42,7 +62,7 @@
 		</dependency>
 	</dependencies>
 
-	<build>
+	<!-- <build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -50,5 +70,64 @@
 			</plugin>
 		</plugins>
 	</build>
+	 -->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${clean.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${resources.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${compiler.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${surefire.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${jar.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${install.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>${deploy.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+				
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${release.plugin.version}</version>
+				</plugin>
+				
+
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+<distributionManagement>
+		<snapshotRepository>
+			<id>emandate-snapshot</id>
+			<name>emandate-snapshot</name>
+			<url>file://${project.build.directory}/emandate-snapshot</url>
+		</snapshotRepository>
+		<repository>
+			<id>emandate-release</id>
+			<name>emandate-release</name>
+			<url>file://${project.build.directory}/emandate-release</url>
+		</repository>
+	</distributionManagement>
 
 </project>
