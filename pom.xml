@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.ece</groupId>
 	<artifactId>springcamel</artifactId>
-	<version>0.0.5-SNAPSHOT</version>
+	<version>0.0.5</version>
 	<name>springcamel</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -18,7 +18,7 @@
 		<developerConnection> scm:git:https://github.com/NagendrappaE/springapache.git</developerConnection>
 		<connection> scm:git:https://github.com/NagendrappaE/springapache.git</connection>
 		<url> scm:git:https://github.com/NagendrappaE/springapache.git</url>
-	  <tag>springcamel-0.0.4</tag>
+	  <tag>springcamel-0.0.5</tag>
   </scm>
 
 
